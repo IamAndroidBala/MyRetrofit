@@ -1,7 +1,10 @@
 package com.android.myretrofit.ui.photoscreen
 
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.myretrofit.BaseActivity
 import com.android.myretrofit.R
 import com.android.myretrofit.network.ApiInterface
@@ -33,6 +36,8 @@ class PhotosActivity : BaseActivity() {
         photoAdapter = PhotoAdapter(mList, this@PhotosActivity)
         recyclerPhoto.adapter = photoAdapter
 
+        setLayoutConfig()
+
         if(!CommonMethods.isNetworkAvailable(this@PhotosActivity)) {
             CommonMethods.showToast(this, getString(R.string.no_network))
             return
@@ -58,6 +63,16 @@ class PhotosActivity : BaseActivity() {
             }
 
         })
+
+    }
+
+    private fun setLayoutConfig() {
+
+        if (this.resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            recyclerPhoto.layoutManager = GridLayoutManager(this,3)
+        } else {
+            recyclerPhoto.layoutManager = GridLayoutManager(this, 5)
+        }
 
     }
 

@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.aandroid.myretrofit.R
 import com.aandroid.myretrofit.network.ApiInterface
 import com.aandroid.myretrofit.network.RetrofitClientInstance
+import com.aandroid.myretrofit.utils.CommonMethods
+import com.kaopiz.kprogresshud.KProgressHUD
 import kotlinx.android.synthetic.main.activity_album.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -14,6 +16,7 @@ class AlbumActivity : AppCompatActivity() {
 
     var mList = ArrayList<AlbumModel>()
     lateinit var albumAdapter: AlbumAdapter
+    lateinit var kProgressHUD: KProgressHUD
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,16 +25,25 @@ class AlbumActivity : AppCompatActivity() {
         albumAdapter = AlbumAdapter(this@AlbumActivity, mList)
         recyclerAlbum.adapter = albumAdapter
 
+        if(!CommonMethods.isNetworkAvailable(this@AlbumActivity)) {
+            CommonMethods.showToast(this, getString(R.string.no_network))
+            return
+        }
+
+        kProgressHUD = CommonMethods.createHUD(this@AlbumActivity)
+
         val apiInterface = RetrofitClientInstance.getRetrofitInstance()!!.create(ApiInterface::class.java)
 
         apiInterface.getAlbums().enqueue(object : Callback<List<AlbumModel>> {
 
             override fun onResponse(call: Call<List<AlbumModel>>, response: Response<List<AlbumModel>>) {
+                cancelProgressBar()
                 setAlbums(response.body() as ArrayList<AlbumModel>)
             }
 
             override fun onFailure(call: Call<List<AlbumModel>>, t: Throwable) {
-
+                cancelProgressBar()
+                CommonMethods.showToast(this@AlbumActivity, t.localizedMessage )
             }
 
         })
@@ -40,6 +52,12 @@ class AlbumActivity : AppCompatActivity() {
 
     private fun setAlbums(result : ArrayList<AlbumModel>) {
         albumAdapter.setAlbums(result)
+    }
+
+    private fun cancelProgressBar() {
+        if (::kProgressHUD.isInitialized) {
+            CommonMethods.cancelHUD(kProgressHUD)
+        }
     }
 
 }

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyRetrofit</string>
+    <string name="photo">   Photos</string>
 </resources>

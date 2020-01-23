@@ -1,4 +1,4 @@
-package com.aandroid.myretrofit
+package com.android.myretrofit
 
 import org.junit.Test
 

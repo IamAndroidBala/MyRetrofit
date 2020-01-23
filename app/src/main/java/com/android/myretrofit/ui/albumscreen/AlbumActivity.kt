@@ -1,11 +1,11 @@
-package com.aandroid.myretrofit.ui.albumscreen
+package com.android.myretrofit.ui.albumscreen
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.aandroid.myretrofit.R
-import com.aandroid.myretrofit.network.ApiInterface
-import com.aandroid.myretrofit.network.RetrofitClientInstance
-import com.aandroid.myretrofit.utils.CommonMethods
+import com.android.myretrofit.R
+import com.android.myretrofit.network.ApiInterface
+import com.android.myretrofit.network.RetrofitClientInstance
+import com.android.myretrofit.utils.CommonMethods
 import com.kaopiz.kprogresshud.KProgressHUD
 import kotlinx.android.synthetic.main.activity_album.*
 import retrofit2.Call

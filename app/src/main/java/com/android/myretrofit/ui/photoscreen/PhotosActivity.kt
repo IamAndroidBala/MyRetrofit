@@ -1,14 +1,13 @@
-package com.aandroid.myretrofit.ui.photoscreen
+package com.android.myretrofit.ui.photoscreen
 
 import android.os.Bundle
 import android.view.MenuItem
-import com.aandroid.myretrofit.BaseActivity
-import com.aandroid.myretrofit.R
-import com.aandroid.myretrofit.network.ApiInterface
-import com.aandroid.myretrofit.network.RetrofitClientInstance
-import com.aandroid.myretrofit.ui.albumscreen.AlbumModel
-import com.aandroid.myretrofit.utils.AppLog
-import com.aandroid.myretrofit.utils.CommonMethods
+import com.android.myretrofit.BaseActivity
+import com.android.myretrofit.R
+import com.android.myretrofit.network.ApiInterface
+import com.android.myretrofit.network.RetrofitClientInstance
+import com.android.myretrofit.ui.albumscreen.AlbumModel
+import com.android.myretrofit.utils.CommonMethods
 import com.kaopiz.kprogresshud.KProgressHUD
 import kotlinx.android.synthetic.main.activity_photo.*
 import retrofit2.Call

@@ -1,11 +1,11 @@
-package com.aandroid.myretrofit.ui.photoscreen
+package com.android.myretrofit.ui.photoscreen
 
 import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.aandroid.myretrofit.R
+import com.android.myretrofit.R
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_photos.view.*

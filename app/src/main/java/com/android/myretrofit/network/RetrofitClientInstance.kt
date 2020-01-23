@@ -1,6 +1,6 @@
-package com.aandroid.myretrofit.network
+package com.android.myretrofit.network
 
-import com.aandroid.myretrofit.utils.BASE_URL
+import com.android.myretrofit.utils.BASE_URL
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

@@ -1,4 +1,4 @@
-package com.aandroid.myretrofit.ui.albumscreen
+package com.android.myretrofit.ui.albumscreen
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

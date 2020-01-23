@@ -1,13 +1,11 @@
-package com.aandroid.myretrofit.ui.splashscreen
+package com.android.myretrofit.ui.splashscreen
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.view.Window
-import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
-import com.aandroid.myretrofit.R
-import com.aandroid.myretrofit.ui.albumscreen.AlbumActivity
+import com.android.myretrofit.R
+import com.android.myretrofit.ui.albumscreen.AlbumActivity
 
 class SpashActivity : AppCompatActivity() {
 

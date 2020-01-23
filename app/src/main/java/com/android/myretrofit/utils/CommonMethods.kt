@@ -1,12 +1,11 @@
-package com.aandroid.myretrofit.utils
+package com.android.myretrofit.utils
 
 import android.content.Context
-import android.graphics.PorterDuff
 import android.net.ConnectivityManager
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
-import com.aandroid.myretrofit.R
+import com.android.myretrofit.R
 import com.kaopiz.kprogresshud.KProgressHUD
 
 class CommonMethods {

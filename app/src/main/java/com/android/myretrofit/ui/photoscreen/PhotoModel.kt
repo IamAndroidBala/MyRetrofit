@@ -1,4 +1,4 @@
-package com.aandroid.myretrofit.ui.photoscreen
+package com.android.myretrofit.ui.photoscreen
 
 import com.google.gson.annotations.SerializedName
 

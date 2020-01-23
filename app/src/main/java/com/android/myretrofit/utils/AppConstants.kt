@@ -1,4 +1,4 @@
-package com.aandroid.myretrofit.utils
+package com.android.myretrofit.utils
 
 const val BASE_URL          = "https://jsonplaceholder.typicode.com"
 const val PHOTO_URL         = "/photos"

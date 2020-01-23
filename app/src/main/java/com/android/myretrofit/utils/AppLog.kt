@@ -1,4 +1,4 @@
-package com.aandroid.myretrofit.utils
+package com.android.myretrofit.utils
 
 import android.util.Log
 

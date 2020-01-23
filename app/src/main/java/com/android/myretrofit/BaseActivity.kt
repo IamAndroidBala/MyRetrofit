@@ -1,4 +1,4 @@
-package com.aandroid.myretrofit
+package com.android.myretrofit
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

@@ -1,4 +1,4 @@
-package com.aandroid.myretrofit.ui.albumscreen
+package com.android.myretrofit.ui.albumscreen
 
 import android.content.Context
 import android.content.Intent
@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.aandroid.myretrofit.R
-import com.aandroid.myretrofit.ui.photoscreen.PhotosActivity
+import com.android.myretrofit.R
+import com.android.myretrofit.ui.photoscreen.PhotosActivity
 import kotlinx.android.synthetic.main.item_album.view.*
 
 class AlbumAdapter(private val mContext : Context, private var mList: ArrayList<AlbumModel>) : RecyclerView.Adapter<AlbumAdapter.ViewHolder>() {
